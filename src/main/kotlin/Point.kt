@@ -1,14 +1,15 @@
 package org.example
 
-class Point(_x: Double, _y: Double): Movable {
-    var x: Double
+class Point(x: Double, y: Double): Movable {
+    var x: Double = x
         private set
-    var y: Double
+    var y: Double = y
         private set
 
     init {
-        x = _x
-        y = _y
+        // Ensure that coordinates are neither NaN nor infinite
+        require(!x.isNaN() && !x.isInfinite()) { "Invalid value for x: $x" }
+        require(!y.isNaN() && !y.isInfinite()) { "Invalid value for y: $y" }
     }
 
     fun clone(): Point {
