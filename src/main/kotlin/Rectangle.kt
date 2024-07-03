@@ -2,8 +2,6 @@ package org.example
 
 class Rectangle(points: Array<Point>): Shape(points) {
     // The points can be any two opposite points of the rectangle
-    override var _points: Array<Point> = points
-
     init {
         require(_points.size == 2) { "Invalid number of points for rectangle: ${_points.size} (2 required)" } // A rectangle is represented by exactly two points
         require(computeWidth() != 0.0) { "Rectangle may not have width of 0"}
