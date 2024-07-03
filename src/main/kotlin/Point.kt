@@ -8,8 +8,8 @@ class Point(x: Double, y: Double): Movable {
 
     init {
         // Ensure that coordinates are neither NaN nor infinite
-        require(!x.isNaN() && !x.isInfinite()) { "Invalid value for x: $x" }
-        require(!y.isNaN() && !y.isInfinite()) { "Invalid value for y: $y" }
+        require(x.isFinite()) { "Invalid value for x: $x" }
+        require(y.isFinite()) { "Invalid value for y: $y" }
     }
 
     fun clone(): Point {
@@ -17,6 +17,8 @@ class Point(x: Double, y: Double): Movable {
     }
 
     override fun move(dx: Double, dy: Double) {
+        require(dx.isFinite() && dy.isFinite()) { "Invalid deltas provided: ${dx}, ${dy}" }
+
         x += dx
         y += dy
     }
