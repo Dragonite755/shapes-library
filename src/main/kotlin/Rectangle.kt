@@ -1,6 +1,6 @@
 package org.example
 
-class Rectangle(points: Array<Point>): Shape() {
+class Rectangle(points: Array<Point>): Shape(points) {
     // The points can be any two opposite points of the rectangle
     override var _points: Array<Point> = points
 
