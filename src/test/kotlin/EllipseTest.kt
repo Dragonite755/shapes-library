@@ -24,8 +24,8 @@ class EllipseTest {
 
     @Test
     fun testArea() {
-        val delta = 1e-10
+        val delta = 1e-5
         assertEquals(Ellipse(Point(0.0, 0.0), arrayOf(4.0, 5.0)).computeArea(), 62.83185, delta)
-        assertEquals(Ellipse(Point(0.0, 0.0), arrayOf(23.1, 55.0)).computeArea(), 3991.3934, delta)
+        assertEquals(Ellipse(Point(0.0, 0.0), arrayOf(23.1, 55.0)).computeArea(), 3991.393466, delta)
     }
 }
