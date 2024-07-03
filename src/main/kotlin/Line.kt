@@ -30,12 +30,12 @@ class Line(points: Array<Point>): Movable {
     }
 
     // Compute the horizontal displacement between the points
-    fun computeHorizontal(): Double {
+    private fun computeHorizontal(): Double {
         return _points[1].x - _points[0].x
     }
 
     // Compute the vertical displacement between the points
-    fun computeVertical(): Double {
+    private fun computeVertical(): Double {
         return _points[1].y - _points[0].y
     }
 }
