@@ -24,6 +24,10 @@ class TriangleTest {
     @Test
     fun testArea() {
         assertEquals(Triangle(arrayOf(Point(-2.0, -2.0), Point(-2.0, 2.0), Point(2.0, -2.0))).computeArea(), 8.0, delta)
-        assertEquals(Triangle(arrayOf(Point(-15.0, -2.0), Point(17.0, -2.0), Point(1.0, 8.0))).computeArea(), 160.0, delta)
+        assertEquals(
+            Triangle(arrayOf(Point(-15.0, -2.0), Point(17.0, -2.0), Point(1.0, 8.0))).computeArea(),
+            160.0,
+            delta
+        )
     }
 }

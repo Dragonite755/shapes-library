@@ -1,6 +1,6 @@
 package org.example
 
-class Rectangle(points: Array<Point>): Shape(points) {
+open class Rectangle(points: Array<Point>): Shape(points) {
     // The points can be any two opposite points of the rectangle
     init {
         require(_points.size == 2) { "Invalid number of points for rectangle: ${_points.size} (2 required)" } // A rectangle is represented by exactly two points
@@ -12,11 +12,11 @@ class Rectangle(points: Array<Point>): Shape(points) {
         return computeWidth() * computeHeight()
     }
 
-    private fun computeWidth(): Double {
+    protected fun computeWidth(): Double {
         return points[1].x - points[0].x
     }
 
-    private fun computeHeight(): Double {
+    protected fun computeHeight(): Double {
         return points[1].y - points[0].y
     }
 }

@@ -45,10 +45,4 @@ class PointTest {
         assertEquals(-12.07, point.x, delta)
         assertEquals(5.7, point.y, delta)
     }
-
-    @Test
-    fun TestSlope() {
-        var delta = 1e-10
-
-    }
 }
